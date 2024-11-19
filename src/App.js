@@ -1,13 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { Suspense, lazy } from 'react';
 import './App.css';
-import HomePage from './components/HomePage/HomePage'
+
+const  Home  = lazy(()=> import('./components/HomePage/HomePage'));
+const  HowIt  = lazy(()=> import('./components/RimbaComponents/HowIt'));
+
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <HomePage></HomePage>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/how-it-works" element={<HowIt />}></Route>
+
+        </Routes>
+
+      </Suspense>
+
+    </BrowserRouter>
   );
 }
 
