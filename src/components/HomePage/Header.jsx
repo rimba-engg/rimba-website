@@ -25,7 +25,7 @@ function Header() {
         <a href="/case-studies" className="self-stretch my-auto">
           Case Studies
         </a>
-        <a href="#" className="self-stretch my-auto">
+        <a href="/about-us" className="self-stretch my-auto">
           About Us
         </a>
       </nav>
