@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy } from 'react';
 import './App.css';
 
@@ -8,7 +8,7 @@ const  HowIt  = lazy(()=> import('./components/RimbaComponents/HowIt'));
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -19,7 +19,7 @@ function App() {
 
       </Suspense>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
