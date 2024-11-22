@@ -7,8 +7,8 @@ exports.handler = async (event, context) => {
 
   const { name, email, message } = JSON.parse(event.body);
 
-  if (!name || !email || !message) {
-    return { statusCode: 400, body: "All fields are required" };
+  if ( !email ) {
+    return { statusCode: 400, body: "Email is required" };
   }
 
   const transporter = nodemailer.createTransport({
