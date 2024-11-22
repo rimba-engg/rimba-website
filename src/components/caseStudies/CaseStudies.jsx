@@ -1,6 +1,6 @@
 import React from "react";
 import {CaseStudyCard} from "./CaseStudyCard";
-import FAQ from "../HomePage/FAQ"
+import FAQ from "../common/FAQ"
 
 const caseStudies = [
   {

@@ -4,7 +4,7 @@
 import React from "react";
 import HowItWorks from "./HowItWorks";
 import ProcessSteps from "./ProcessSteps";
-import FAQ from "../HomePage/FAQ";
+import FAQ from "../common/FAQ";
 import ContactSection from "./ContactSection";
 const MainContent = () => {
   return (
