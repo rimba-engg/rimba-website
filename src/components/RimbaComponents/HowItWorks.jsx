@@ -4,6 +4,13 @@
 import React from "react";
 
 const HowItWorks = () => {
+  const scrollToGetStarted = () => {
+    const getStartedSection = document.getElementById("get-started");
+    if (getStartedSection) {
+      getStartedSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="mt-40 w-full max-w-[1180px] max-md:mt-10 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col">
@@ -16,7 +23,10 @@ const HowItWorks = () => {
               Simplifying AI for Everyone. Follow these simple steps to leverage
               the power of AI with RIMBA.
             </p>
-            <button className="gap-2.5 self-stretch px-8 py-5 mt-10 text-base font-medium text-center text-white bg-teal-700 rounded-xl min-h-[54px] max-md:px-5">
+            <button
+              onClick={scrollToGetStarted}
+              className="gap-2.5 self-stretch px-8 py-5 mt-10 text-base font-medium text-center text-white bg-teal-700 rounded-xl min-h-[54px] max-md:px-5"
+            >
               Request a Demo
             </button>
           </div>

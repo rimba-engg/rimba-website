@@ -35,7 +35,7 @@ function GetStarted() {
   };
 
   return (
-    <section className="flex flex-col items-center self-stretch pt-24 pb-8 mt-24 w-full text-white bg-slate-950 max-md:mt-10 max-md:max-w-full">
+    <section id="get-started" className="flex flex-col items-center self-stretch pt-24 pb-8 mt-24 w-full text-white bg-slate-950 max-md:mt-10 max-md:max-w-full">
       <div className="flex gap-5 justify-between w-full max-w-[1180px] max-md:max-w-full">
         <h2 className="my-auto text-5xl font-semibold leading-[72px] max-md:text-4xl max-md:leading-[64px]">
           Get Compliant, Streamline your process today

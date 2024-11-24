@@ -3,7 +3,15 @@
  */
 import React from "react";
 import Features from './Features'
+
 function AboutHero() {
+  const scrollToGetStarted = () => {
+    const getStartedSection = document.getElementById("get-started");
+    if (getStartedSection) {
+      getStartedSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="mt-24 w-full max-w-[1180px] max-md:mt-10 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col">
@@ -27,7 +35,10 @@ function AboutHero() {
               so you could get more off-takes, get projects funded, and reduce
               effort to generate credits.
             </p>
-            <button className="gap-2.5 self-stretch px-8 py-5 mt-10 text-base font-medium text-center text-white bg-teal-700 rounded-xl min-h-[54px] max-md:px-5">
+            <button 
+              onClick={scrollToGetStarted}
+              className="gap-2.5 self-stretch px-8 py-5 mt-10 text-base font-medium text-center text-white bg-teal-700 rounded-xl min-h-[54px] max-md:px-5"
+            >
               Request a Demo
             </button>
           </div>
