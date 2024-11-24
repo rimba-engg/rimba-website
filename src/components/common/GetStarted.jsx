@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 function GetStarted() {
   const [formData, setFormData] = useState({ email: "" });
@@ -9,27 +10,28 @@ function GetStarted() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    try {
-      const response = await fetch("/.netlify/functions/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, name: "", message: "" }),
-      });
-
-      if (response.ok) {
-        setStatus("Email sent successfully!");
-        setFormData({ email: "" });
-      } else {
-        setStatus("Failed to send email.");
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus("Error occurred.");
-    }
+    emailjs
+      .send(
+        "service_yox2yom", // Replace with your EmailJS Service ID
+        "template_veuhdck", // Replace with your EmailJS Template ID
+        formData,
+        "Kt7RYHqoM2lfmaVrk" // Replace with your EmailJS User ID
+      )
+      .then(
+        (response) => {
+          setStatus("Email sent successfully!");
+          setFormData({ email: "" });
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          setStatus("Failed to send email.");
+          console.log("FAILED...", error);
+        }
+      );
   };
 
   return (
