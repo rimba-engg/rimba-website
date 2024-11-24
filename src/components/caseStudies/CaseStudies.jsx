@@ -1,6 +1,6 @@
 import React from "react";
-import {CaseStudyCard} from "./CaseStudyCard";
-import FAQ from "../common/FAQ"
+import { CaseStudyCard } from "./CaseStudyCard";
+import FAQ from "../common/FAQ";
 
 const caseStudies = [
   {
@@ -26,12 +26,16 @@ const caseStudies = [
   },
 ];
 
-
 function CaseStudies() {
+  const scrollToGetStarted = () => {
+    const getStartedSection = document.getElementById("get-started");
+    if (getStartedSection) {
+      getStartedSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex overflow-hidden flex-col bg-white">
-      
-
       <main className="flex flex-col items-start self-center mt-10 ml-4 w-full max-w-[1210px] max-md:max-w-full">
         <nav
           aria-label="Breadcrumb"
@@ -49,7 +53,7 @@ function CaseStudies() {
           <span className="font-medium text-teal-700">Case Studies</span>
         </nav>
 
-        <section className="flex  gap-5 justify-between mt-28 w-full max-w-[1180px] max-md:mt-10 max-md:max-w-full">
+        <section className="flex gap-5 justify-between mt-28 w-full max-w-[1180px] max-md:mt-10 max-md:max-w-full">
           <div className="flex flex-col items-start my-auto">
             <h1 className="self-stretch text-5xl font-semibold leading-none text-sky-950 max-md:text-4xl">
               Case Studies
@@ -57,7 +61,10 @@ function CaseStudies() {
             <p className="mt-5 text-lg leading-none text-slate-950 text-opacity-80">
               How we could help you
             </p>
-            <button className="gap-2.5 self-stretch px-8 py-5 mt-10 text-base font-medium text-center text-white bg-teal-700 rounded-xl min-h-[54px] max-md:px-5">
+            <button
+              onClick={scrollToGetStarted}
+              className="gap-2.5 self-stretch px-8 py-5 mt-10 text-base font-medium text-center text-white bg-teal-700 rounded-xl min-h-[54px] max-md:px-5"
+            >
               Request a Demo
             </button>
           </div>
@@ -65,7 +72,7 @@ function CaseStudies() {
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/966e147ecc70cfdf7d83541750bda9c3e2af76c75e6b07f19d31d64e44f89fa4?placeholderIfAbsent=true&apiKey=fd087a8e03ab4599addc57757630651c"
             alt="Case Studies Hero Image"
-            className="object-contain  aspect-[1.82] max-md:max-w-full w-1/2"
+            className="object-contain aspect-[1.82] max-md:max-w-full w-1/2"
           />
         </section>
 
@@ -84,7 +91,7 @@ function CaseStudies() {
               ))}
             </div>
           </div>
-        </section>    
+        </section>
       </main>
     </div>
   );

@@ -6,6 +6,13 @@ function Header() {
 
   const isActive = (path) => location.pathname === path;
 
+  const scrollToGetStarted = () => {
+    const getStartedSection = document.getElementById("get-started");
+    if (getStartedSection) {
+      getStartedSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="flex flex-wrap gap-5 justify-between self-stretch px-20 py-4 w-full bg-white bg-opacity-40 shadow-[0px_4px_20px_rgba(209,234,232,0.3)] max-md:px-5 max-md:max-w-full">
       <img
@@ -56,7 +63,10 @@ function Header() {
           About Us
         </a>
       </nav>
-      <button className="gap-2.5 self-stretch py-4 px-6 text-sm font-medium text-center text-white bg-teal-700 rounded-xl min-h-[48px] max-md:px-5">
+      <button
+        onClick={scrollToGetStarted}
+        className="gap-2.5 self-stretch py-4 px-6 text-sm font-medium text-center text-white bg-teal-700 rounded-xl min-h-[48px] max-md:px-5"
+      >
         Request A Demo
       </button>
     </header>

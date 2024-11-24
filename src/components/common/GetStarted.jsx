@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 function GetStarted() {
   const [formData, setFormData] = useState({ email: "" });
@@ -9,31 +10,32 @@ function GetStarted() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    try {
-      const response = await fetch("/.netlify/functions/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, name: "", message: "" }),
-      });
-
-      if (response.ok) {
-        setStatus("Email sent successfully!");
-        setFormData({ email: "" });
-      } else {
-        setStatus("Failed to send email.");
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus("Error occurred.");
-    }
+    emailjs
+      .send(
+        "service_yox2yom", // Replace with your EmailJS Service ID
+        "template_veuhdck", // Replace with your EmailJS Template ID
+        formData,
+        "Kt7RYHqoM2lfmaVrk" // Replace with your EmailJS User ID
+      )
+      .then(
+        (response) => {
+          setStatus("Email sent successfully!");
+          setFormData({ email: "" });
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          setStatus("Failed to send email.");
+          console.log("FAILED...", error);
+        }
+      );
   };
 
   return (
-    <section className="flex flex-col items-center self-stretch pt-24 pb-8 mt-24 w-full text-white bg-slate-950 max-md:mt-10 max-md:max-w-full">
+    <section id="get-started" className="flex flex-col items-center self-stretch pt-24 pb-8 mt-24 w-full text-white bg-slate-950 max-md:mt-10 max-md:max-w-full">
       <div className="flex gap-5 justify-between w-full max-w-[1180px] max-md:max-w-full">
         <h2 className="my-auto text-5xl font-semibold leading-[72px] max-md:text-4xl max-md:leading-[64px]">
           Get Compliant, Streamline your process today
