@@ -4,7 +4,7 @@
 import React from "react";
 import { CaseStudyHeader } from "./CaseStudyHeader";
 import { CaseStudyCard } from "./CaseStudyCard";
-import { Footer } from "./Footer";
+// import { Footer } from "./Footer";
 
 const caseStudies = [
   {
@@ -112,7 +112,7 @@ export const CaseStudyPage = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

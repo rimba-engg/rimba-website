@@ -5,11 +5,13 @@ import GetStarted from "../common/GetStarted";
 import Footer from "../common/Footer";
 import ContactUs from "../common/ContactUs";
 import FAQ from "../common/FAQ";
+import { CaseStudyPage } from "./CaseStudyPage";
 function CaseStudiesFrame(){
     return(
     <div className="flex overflow-hidden flex-col items-center bg-white">
         
         <Header></Header>
+        {/* <CaseStudyPage></CaseStudyPage> */}
         <CaseStudies></CaseStudies>
         <FAQ></FAQ>
         <ContactUs></ContactUs>

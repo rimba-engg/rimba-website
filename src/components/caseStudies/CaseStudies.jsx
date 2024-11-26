@@ -4,6 +4,7 @@ import FAQ from "../common/FAQ";
 
 const caseStudies = [
   {
+    id:1,
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/a88861822e83dccdb999843aa990405094498b9a1df7019c4fc78c9f8e494e84?placeholderIfAbsent=true&apiKey=fd087a8e03ab4599addc57757630651c",
     title: "Streamlining Compliance for an RNG Project",
@@ -11,6 +12,7 @@ const caseStudies = [
       "Renewable Natural Gas (RNG) is a key player in reducing carbon emissions, offering a low-carbon fuel alternative...",
   },
   {
+    id:2,
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/f247da39c22b870ad8fd224f5d2e6d9712f321e843cbb4c5dae56013c3789eb7?placeholderIfAbsent=true&apiKey=fd087a8e03ab4599addc57757630651c",
     title: "Streamlining Feedstock Traceability for Biofuel Traders",
@@ -18,6 +20,7 @@ const caseStudies = [
       "Feedstock traders play a crucial role in the biofuels industry by ensuring a steady supply of raw materials to biofu...",
   },
   {
+    id:3,
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/54529823d15e79091fb89da40f1a3854c00aac90ca04a267c46c6bf6e1576c53?placeholderIfAbsent=true&apiKey=fd087a8e03ab4599addc57757630651c",
     title: "Transforming UCO Traceability with Rimba",
