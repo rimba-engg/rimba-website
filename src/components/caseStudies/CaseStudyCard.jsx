@@ -3,7 +3,7 @@
  */
 import React from "react";
 
-export const CaseStudyCard = ({ image, title, description }) => {
+export const CaseStudyCard = ({ image, title, description, id }) => {
   return (
     <article className="flex flex-col grow pb-8 w-full text-base rounded-3xl bg-white bg-opacity-40 shadow-[0px_0px_20px_rgba(209,234,232,0.5)] max-md:mt-10">
       <img
@@ -19,7 +19,7 @@ export const CaseStudyCard = ({ image, title, description }) => {
         <p className="self-stretch mt-3.5 leading-6 text-black text-opacity-60">
           {description}
         </p>
-        <button className="flex gap-2.5 mt-5 font-medium text-teal-700">
+        <a href={`/case-studies/${id}`} className="flex gap-2.5 mt-5 font-medium text-teal-700">
           <span className="grow">View Details</span>
           <img
             loading="lazy"
@@ -27,7 +27,7 @@ export const CaseStudyCard = ({ image, title, description }) => {
             alt=""
             className="object-contain shrink-0 my-auto aspect-[1.21] w-[17px]"
           />
-        </button>
+        </a>
       </div>
     </article>
   );
