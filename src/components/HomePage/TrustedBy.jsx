@@ -9,7 +9,7 @@ function TrustedBy() {
       <div className="flex gap-5 max-md:flex-col">
         <div className="flex flex-col w-[29%] max-md:ml-0 max-md:w-full">
           <h2 className="self-stretch my-auto text-xl font-bold leading-8 text-slate-950 max-md:mt-10">
-            Trusted by in the bioenergy supply chain
+            Trusted by 
           </h2>
         </div>
         <div className="flex flex-col ml-5 w-[71%] max-md:ml-0 max-md:w-full">
