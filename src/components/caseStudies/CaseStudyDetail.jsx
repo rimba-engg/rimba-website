@@ -40,7 +40,7 @@ const CaseStudies = [
     image3:"case_study_1_3.png",
     background:"Renewable Natural Gas (RNG) is a key player in reducing carbon emissions, offering a low-carbon fuel alternative. In the U.S., RNG can be derived from livestock manure, landfills, food waste, and wastewater. By 2019, the U.S. consumed 261 billion cubic feet (BCF) of RNG, with projections indicating a potential to produce up to 2,200 BCF annually through anaerobic digestion—equivalent to about 11% of the nation’s daily natural gas consumption.There are thousands of RNG projects across the U.S., primarily supplying independent power producers, electric utilities, and commercial industries. However, the success of these projects hinges not only on production but also on compliance with regulatory standards to access carbon credit markets, which drive ~75% of their revenue.",
     Challenge:{
-      intro:"To sell RNG as a low-carbon fuel, companies must comply with various regulatory and certification standards (LCFS, RFS, ISCC). Compliance requires detailed operational reports to demonstrate adherence to these standards.",
+      intro:["To sell RNG as a low-carbon fuel, companies must comply with various regulatory and certification standards (LCFS, RFS, ISCC). Compliance requires detailed operational reports to demonstrate adherence to these standards."],
       points:[
         {
           head:"Data Complexity :",
@@ -53,7 +53,7 @@ const CaseStudies = [
       ]
     },
     Solution:{
-      intro:"Rimba transforms the compliance process by automating data capture, transformation, and reporting:",
+      intro:["Rimba transforms the compliance process by automating data capture, transformation, and reporting:"],
       points:[
         {
           head:"Data Integration: ",
@@ -88,6 +88,105 @@ const CaseStudies = [
         {
           head:"Revenue Optimization: ",
           detail:"Streamlined compliance enables faster credit generation, maximizing revenue potential."
+        },
+      ]
+    }
+  },
+  {
+    id:2,
+    bread:"Streamlining Feedstock Traceability for Biofuel Traders",
+    image1:"case_study_2_1.png",
+    image2:"case_study_2_2.png",
+    image3:"case_study_2_3.png",
+    background:"Feedstock traders play a crucial role in the biofuels industry by ensuring a steady supply of raw materials to biofuel producers. They manage the logistics of sourcing, transporting, and delivering feedstocks from diverse locations to production facilities. In addition, these traders navigate the complex regulatory landscape of biofuels, ensuring compliance with sustainability certifications, traceability requirements, and other regulations.To maintain a competitive edge, feedstock traders must efficiently manage supply chain operations while adhering to stringent compliance standards, making operational accuracy and regulatory transparency key priorities.",
+    Challenge:{
+      intro:["Despite their vital role, feedstock traders face significant hurdles, particularly when it comes to verifying the authenticity of imported feedstocks. In addition to authenticity concerns, traders must navigate an increasingly complex regulatory environment. Different jurisdictions have distinct and evolving sustainability certification standards, with increasing pressure to meet stringent traceability requirements. Regulatory agencies now demand detailed 'point of origin' documentation to track feedstocks throughout the supply chain.",
+        "The current methods of recordkeeping are often seen as insufficient, making it difficult for traders to prove the legitimacy of certain imported waste oils, fats, and greases. Failure to produce the necessary documentation during audits can result in severe financial consequences, including the loss of carbon credits and regulatory incentives."
+      ],
+      points:null
+    },
+    Solution:{
+      intro:["Rimba offers a comprehensive solution designed to streamline the sustainability certification and compliance process for feedstock traders. By synthesizing unstructured text data from various operational documents—such as weight receipts, delivery notes, and bills of lading—Rimba automates the creation of compliance reports required by regulatory agencies.",
+        "Using advanced Intelligent Document Processing (IDP), Rimba extracts, validates, and organizes data from diverse document formats, reducing the time and effort needed for manual data entry. This ensures that every piece of documentation is audit-ready and fully compliant with multiple certification standards."
+      ],
+      points:null
+    },
+    Results:{
+      intro:"With Rimba, feedstock traders can:",
+      post:"Rimba empowers feedstock traders to navigate the complexities of the biofuels industry with ease, providing a centralized platform for managing sustainability compliance and enhancing supply chain transparency.",
+      points:[
+        {
+          head:"Ensure Authenticity:",
+          detail:" Gain confidence in the legitimacy of imported feedstocks by maintaining detailed and verifiable records of their point of origin."
+        },
+        {
+          head:"Streamline Compliance:: ",
+          detail:" Simplify the process of meeting complex and evolving regulatory requirements across different jurisdictions."
+        },
+        {
+          head:"Automate Documentation:: ",
+          detail:" Transform unstructured data into standardized, audit-ready reports, reducing reliance on manual recordkeeping."
+        },
+        {
+          head:"Improve Audit Outcomes: ",
+          detail:"Be fully prepared for annual audits, ensuring continued access to carbon credits and sustainability incentives."
+        },
+      ]
+    }
+  },
+  {
+    id:3,
+    bread:"Transforming UCO Traceability with Rimba",
+    image1:"case_study_3_1.png",
+    image2:"case_study_3_2.png",
+    image3:"case_study_3_3.png",
+    background:"Used Cooking Oil (UCO) has become an invaluable resource for biofuel production due to its numerous advantages. As a low-cost feedstock, UCO is a waste product that would otherwise be discarded, offering a sustainable and economical solution. Repurposing UCO not only prevents improper disposal but also significantly reduces carbon emissions, contributing to a lower lifecycle greenhouse gas footprint compared to fossil fuels. Additionally, UCO is renewable and highly versatile, capable of being converted into biodiesel, renewable diesel, and sustainable aviation fuel (SAF). Regulatory frameworks worldwide incentivize the use of waste-based biofuels like UCO, making it an essential component of the renewable energy landscape.",
+    Challenge:{
+      intro:["Despite its benefits, the UCO supply chain faces significant challenges, particularly around traceability and compliance. One major concern is the verification of authenticity; imported UCO is sometimes suspected of being fraudulently mixed with fresh vegetable oils such as palm oil. As imports surge, ensuring the legitimacy of supply has become increasingly difficult. Moreover, traceability requirements vary across regions, with countries like the U.S. and those in Europe mandating distinct documentation to ensure UCO’s origin and carbon intensity. Regulatory agencies demand detailed “point of origin” tracking throughout the supply chain to prevent fraud and determine carbon intensity accurately.",
+        "Despite its benefits, the UCO supply chain faces significant challenges, particularly around traceability and compliance. One major concern is the verification of authenticity; imported UCO is sometimes suspected of being fraudulently mixed with fresh vegetable oils such as palm oil. As imports surge, ensuring the legitimacy of supply has become increasingly difficult. Moreover, traceability requirements vary across regions, with countries like the U.S. and those in Europe mandating distinct documentation to ensure UCO’s origin and carbon intensity. Regulatory agencies demand detailed “point of origin” tracking throughout the supply chain to prevent fraud and determine carbon intensity accurately."
+      ],
+      points:null
+    },
+    Solution:{
+      intro:["Rimba offers an end-to-end traceability and compliance solution tailored for UCO supply chains that enables easy recording and validation of UCO collections, ensuring data integrity from the point of origin."],
+      points:[
+        {
+          head:"",
+          detail:"Streamlines data collection from diverse stakeholders across the supply chain."
+        },
+        {
+          head:"",
+          detail:"Automates data extraction and recognition from thousands of documents (PDFs, images, spreadsheets) related to procurement, transportation, and operations."
+        },
+        {
+          head:" ",
+          detail:"Uses advanced AI to enhance data accuracy by flagging errors across various document formats."
+        },
+        {
+          head:" ",
+          detail:"Consolidates reporting for multiple certification standards, reducing redundancy and simplifying audit preparation."
+        },
+      ]
+    },
+    Results:{
+      intro:"With Rimba, UCO supply chain stakeholders can:",
+      post:"",
+      points:[
+        {
+          head:"Improve Traceability: ",
+          detail:"Track UCO from its point of origin, ensuring authenticity and compliance."
+        },
+        {
+          head:"Save Time and Reduce Costs: ",
+          detail:"Automate labor-intensive data processing, reducing reliance on manual efforts and expensive consultants."
+        },
+        {
+          head:"Enhance Compliance: ",
+          detail:"Deliver audit-ready reports that meet the stringent requirements of LCFS, RFS, ISCC, and other certifications."
+        },
+        {
+          head:"Minimize Risk: ",
+          detail:"Ensure accurate and timely reporting to avoid penalties, loss of credits, or failed audits."
         },
       ]
     }
@@ -166,7 +265,13 @@ export default function CaseStudyDetail() {
                 Challenge
                 </h2>
                 <br></br>
-              <span>{current.Challenge.intro}</span>
+              {current.Challenge.intro.map(el=>{
+                return(
+                  <>
+                  <span>{el}</span><br></br>
+                  </>
+                )
+              })}
               {current.Challenge.points &&
               current.Challenge.points.map(el=>{
                 return(
@@ -184,7 +289,13 @@ export default function CaseStudyDetail() {
               Solution
                 </h2>
                 <br></br>
-              <span>{current.Solution.intro}</span>
+                {current.Solution.intro.map(el=>{
+                return(
+                  <>
+                  <span>{el}</span><br></br>
+                  </>
+                )
+              })}
               {current.Solution.points &&
               current.Solution.points.map(el=>{
                 return(
