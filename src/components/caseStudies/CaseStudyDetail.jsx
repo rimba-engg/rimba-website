@@ -2,6 +2,35 @@
 import React, { useState, useEffect } from 'react';
 import Header from "../common/Header";
 import { useParams } from 'react-router-dom';
+import { CaseStudyCard } from "./CaseStudyCard";
+import Footer from '../common/Footer';
+import GetStarted from '../common/GetStarted';
+const caseStudies = [
+  {
+    id:1,
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/a88861822e83dccdb999843aa990405094498b9a1df7019c4fc78c9f8e494e84?placeholderIfAbsent=true&apiKey=fd087a8e03ab4599addc57757630651c",
+    title: "Streamlining Compliance for an RNG Project",
+    description:
+      "Renewable Natural Gas (RNG) is a key player in reducing carbon emissions, offering a low-carbon fuel alternative...",
+  },
+  {
+    id:2,
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/f247da39c22b870ad8fd224f5d2e6d9712f321e843cbb4c5dae56013c3789eb7?placeholderIfAbsent=true&apiKey=fd087a8e03ab4599addc57757630651c",
+    title: "Streamlining Feedstock Traceability for Biofuel Traders",
+    description:
+      "Feedstock traders play a crucial role in the biofuels industry by ensuring a steady supply of raw materials to biofu...",
+  },
+  {
+    id:3,
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/54529823d15e79091fb89da40f1a3854c00aac90ca04a267c46c6bf6e1576c53?placeholderIfAbsent=true&apiKey=fd087a8e03ab4599addc57757630651c",
+    title: "Transforming UCO Traceability with Rimba",
+    description:
+      "Used Cooking Oil (UCO) has become an invaluable resource for biofuel production due to its numerous advan...",
+  },
+];
 const CaseStudies = [
   {
     id:1,
@@ -184,7 +213,7 @@ export default function CaseStudyDetail() {
 
           </section>
           
-          {/* <section className="w-full">
+          <section className="w-full">
           <h2 className="self-center mt-44 text-3xl font-semibold text-center text-slate-950 max-md:mt-10">
             Other Case Studies
           </h2>
@@ -199,31 +228,11 @@ export default function CaseStudyDetail() {
               ))}
             </div>
           </div>
-        </section> */}
         </section>
-  
-        <footer className="flex flex-col items-center pt-24 pb-8 mt-24 w-full text-white bg-slate-950 max-md:mt-10 max-md:max-w-full">
-          <div className="flex flex-wrap gap-5 justify-between w-full max-w-[1180px] max-md:max-w-full">
-            <h2 className="my-auto text-5xl font-semibold leading-[72px] max-md:text-4xl max-md:leading-[64px]">
-              Get Compliant, Streamline your process today
-            </h2>
-            <form className="flex flex-col p-11 font-medium rounded-3xl bg-white bg-opacity-10 max-md:px-5 max-md:max-w-full">
-              <h3 className="self-start text-3xl font-semibold">Get Started</h3>
-              <label htmlFor="email" className="self-start mt-10 text-lg">Email</label>
-              <input
-                type="email"
-                id="email"
-                className="px-5 py-5 mt-5 text-sm bg-white rounded-xl text-neutral-400 max-md:max-w-full"
-                placeholder="Enter your email"
-              />
-              <button type="submit" className="gap-2.5 self-stretch px-8 py-5 mt-8 text-base text-center text-white bg-teal-700 rounded-xl min-h-[54px] max-md:px-5">
-                Request A Demo
-              </button>
-            </form>
-          </div>
-          
-          {/* Footer content remains the same */}
-        </footer>
+        </section>
+        <GetStarted></GetStarted>
+        <Footer></Footer>
+        
       </main>
     );
 
